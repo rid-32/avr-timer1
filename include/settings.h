@@ -19,6 +19,7 @@ inline void setup_timer1() {
   TCCR1B |= (1 << CS12 | 1 << WGM12);
   TCCR1B &= ~(1 << CS10 | 1 << CS11 | 1 << WGM13);
 
+  /* compare every 500 millis */
   OCR1A = F_CPU / (256 * 2);
 
   /* clear counter */
